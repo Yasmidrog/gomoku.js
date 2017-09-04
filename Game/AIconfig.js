@@ -18,7 +18,7 @@ const patterns = [{p: 'xxxxx', rate: 99999}, // пять в ряд (финаль
     {p: '0xx0', rate: 200}]
 
 module.exports.find = function (line, player) {
-    line = line.replace(/I/g, player);
+    line = line.replace('I', player);
     for (let p of patterns) {
         let str = p.p.replace(/x/g, player);
 
