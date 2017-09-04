@@ -1,0 +1,185 @@
+@import "vars";
+@import "material_btn";
+@font-face {
+  font-family: Roboto Light;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: Noto;
+  src: url(../fonts/NotoSansUI-Regular.ttf);
+}
+body,html {
+  width: 100vw;
+  min-width: 650px;
+  height: 99vh;
+  margin:  0;
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background: #00b09b;
+  background: linear-gradient(to right, #96c93d, #00b09b);
+
+  @media #{$phone}{
+    min-height: 500px;
+    flex-flow: column;
+    min-width: 250px;
+  }
+  @media #{$ipad} {
+    min-height: 1150px;
+  }
+  @media #{$ipadpro} {
+    min-width: 1400px;
+  }
+  * {
+    font-family: Noto, sans-serif;
+    color: #313131;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+canvas {
+  padding: 0;
+  min-height: 300px;
+  margin-bottom: 5vh;
+  transition: filter 1s;
+}
+
+#game {
+  position: relative;
+  margin: 0 3% 0 0;
+  @media #{$phone} {
+    margin: 0 0 2% 0;
+  }
+  .exit {
+    cursor: pointer;
+    width: 3.8vh;
+    height: 3.8vh;
+    font-size: 2.5vh;
+    background-color: #ee3917;
+    color: #d1d4d5;
+    position: absolute;
+    top: -2.2vh;
+    left: -2.2vh;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 6
+  }
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #212121;
+  font-size: 4.6vh;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Light", sans-serif;
+  display: flex;
+  * {
+    margin: auto;
+    text-align: center;
+  }
+}
+.menu{
+  box-shadow: #313131 0.3vh 0.5vh 0.8vh 0px;
+  transition: width 1s, height 1s;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 70%;
+  @media #{$phone}{
+    width: 90%;
+    height: 70%;
+    margin:5vh 0;
+  }
+
+  background-color: #26A69A;
+
+  #info {
+    margin: 1vh 0 2vh 0;
+    display: none;
+    text-align: center;
+    font-size: 3vh;
+    color:#212121;
+    .cross {
+      color: #ee0c00
+    }
+    .nul {
+      color: #580add;
+    }
+  }
+  h1 {
+    cursor: pointer;
+    @media #{$phone}{
+      font-size: 4.5vh;
+      margin: 1vh;
+    }
+    font-size: 7vh;
+    text-align: center;
+    margin: 2vh 0 0.3vh 0;
+  }
+  h2 {
+    @media #{$phone}{
+      display: none;
+    }
+    text-align: center;
+    margin: 0.2vh 0 0.5vh 0;
+    font-size: 3vh;
+    font-family: "Roboto Light", sans-serif;
+  }
+  .interface {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    .settings{
+      margin: 5vh 2vh 2vh;
+      @media #{$phone} {
+        margin: 0.1vh;
+      }
+      box-shadow: 0 0.2vh 0.5vh rgba(0, 0, 0, .6);
+      background-color: #abff4d;
+      padding: 1vh;
+      border-radius: 0.5vh;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      margin: 0.5vh auto;
+      font-size: 2.5vh;
+      color: #313131;
+      justify-content: center;
+      input, select{
+        font-size: 2vh;
+        margin-left: 1vh;
+        font-family: "Noto", sans-serif;
+      }
+      input {
+        height: 3vh;
+        width: 5vh;
+      }
+    }
+  }
+
+}
+
+.menu.short {
+  width: 30%;
+  @media #{$phone}{
+    width: 90%;
+    height: 40vh;
+    min-height: 225px;
+  }
+}
+

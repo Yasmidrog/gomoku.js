@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="build/index.js" defer></script>
+</head>
+<body>
+
+<div class="menu" id="menu">
+    <div class="head">
+        <a href="https://github.com/Yasmidrog/gomoku.js" target="_blank">
+            <h1>Gomoku</h1>
+            <h2>five-in-line</h2>
+        </a>
+        <p id="info">
+            Ходят <span class='cross'>крестики</span>
+        </p>
+    </div>
+
+    <div class="interface">
+        <div class="settings">
+        <label> Играть
+            <select id="game_type">
+            <option value="x">X</option>
+            <option value="o">0</option>
+            <option value="two">2 игрока</option>
+         </select>
+        </label>
+        <label>Размер поля: <input type="number" value="5" id="size" max="25" min="5"></label>
+        </div>
+        <button class="btn waves-effect " id="restart">
+            Старт
+        </button>
+    </div>
+</div>
+<div id="game">
+    <!-- тут будет canvas -->
+</div>
+</body>
+</html>

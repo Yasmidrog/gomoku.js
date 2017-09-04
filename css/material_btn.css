@@ -1,0 +1,44 @@
+.c_btn {
+  position: relative;
+  display: inline-block;
+  padding: 2vh;
+  margin: 1vh;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 0.6vh;
+  box-shadow: 0 0.1vh 0.4vh rgba(0, 0, 0, 0.6);
+  background-color: #d1d4d5;
+  color: #3c3c3c;
+  transition: background-color .3s;
+  font-size: 4.2vh;
+  width: auto; }
+
+.c_btn:hover, .c_btn:focus {
+  background-color: #b2b6b4; }
+
+.c_btn > * {
+  position: relative; }
+
+.c_btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.c_btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out; }
+
+/*# sourceMappingURL=material_btn.css.map */
