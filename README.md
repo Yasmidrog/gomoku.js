@@ -1,5 +1,5 @@
 # gomoku.js
-Gomoku for playing with computer (♥) or noone of your 0 friends.
+Gomoku for playing with computer
 ### Alghorythms:
 ##### http://algolist.manual.ru/games/fiveinarow.php
 ##### https://habrahabr.ru/post/202264/
